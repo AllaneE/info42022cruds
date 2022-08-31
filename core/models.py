@@ -10,6 +10,7 @@ class Camisas(models.Model):
     ano = models.CharField("Ano de lançamento", max_length=4)
     personalizacao = models.IntegerField("Númeração da Camisa")
     foto = models.FileField("Foto do Produto")
+    quantidade = models.IntegerField("Quantidade")
 
 class Short(models.Model):
     modelo = models.CharField("Modelo", max_length=100)
@@ -17,7 +18,7 @@ class Short(models.Model):
     marca = models.CharField("Marca", max_length=100)
     tipo = models.CharField("Tipo", max_length=100)
     foto = models.FileField("Foto do Produto")
-    
+    quantidade = models.IntegerField("Quantidade")
 
 class Calcados(models.Model):
     modelo = models.CharField("Modelo", max_length=100)
@@ -25,4 +26,13 @@ class Calcados(models.Model):
     marca = models.CharField("Marca", max_length=100)
     tipo = models.CharField("Tipo", max_length=100)
     foto = models.FileField("Foto do Produto")
+    quantidade = models.IntegerField("Quantidade")
+
+class Acessorios(models.Model):
+    nome = models.CharField("Nome", max_length=100)
+    tipo = models.CharField("Tipo", max_length=100)
+    marca = models.CharField("Marca do produto", max_length=100)
+    esporte = models.CharField("Tamanho", max_length=100)
+    foto = models.FileField("Foto do Produto")
+    quantidade = models.IntegerField("Quantidade")
 

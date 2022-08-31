@@ -1,5 +1,6 @@
+from pyexpat import model
 from django.forms import ModelForm
-from .models import Camisas, Short, Calcados
+from .models import Camisas, Short, Calcados, Acessorios
 
 class CamisasForm(ModelForm):
     class Meta:
@@ -11,7 +12,12 @@ class ShortForm(ModelForm):
            model = Short
            fields = ['modelo', 'tamanho','marca','tipo','foto']
 
-class CForm(ModelForm):
+class CalcadosForm(ModelForm):
     class Meta:
            model = Calcados
            fields = ['modelo', 'tamanho','marca','marca','foto']
+
+class AcessoriosForm(ModelForm):
+    class Meta:
+        model = Acessorios
+        fiels = ['nome','tipo','marca','esporte','foto','quantidade']
