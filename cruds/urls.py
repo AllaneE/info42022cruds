@@ -15,7 +15,40 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.views import short_listar,camisas_listar,calcados_listar,acessorios_listar
+from core.views import acessorios_cadastrar,camisas_cadastrar,calcados_cadastrar, short_cadastrar
+from core.views import short_editar, camisas_editar,calcados_editar,acessorios_editar
+from core.views import short_remover,camisas_remover,calcados_remover,acessorios_remover, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name= 'home'),
+
+   
+    #url de camisas
+    path('camisas/', camisas_listar, name= 'listar_camisas'),
+    path('camisa_cadastro/', camisas_cadastrar, name='camisa_cadastro'),
+    path('camisa_editar/<int:id>/',camisas_editar, name='camisa_editar'),
+    path('camisa_remover/<int:id>/', camisas_remover, name= 'camisa_remover'),
+
+
+    #url de calcados
+    path('calcados/', calcados_listar, name= 'listar_calcados'),
+    path('calcados_cadastro/', calcados_cadastrar, name='calcados_cadastro'),
+    path('calcados_editar/<int:id>/', calcados_editar, name='calcados_editar'),
+    path('calcados_remover/<int:id>/', calcados_remover, name= 'calcados_remover'),
+
+
+    #url de shorts
+    path('short/', short_listar, name= 'listar_shorts'),
+    path('short_cadastro/', short_cadastrar, name='short_cadastro'),
+    path('short_editar/<int:id>/',short_editar, name='short_editar'),
+    path('short_remover/<int:id>/', short_remover, name= 'short_remover'),
+
+
+    #url de acessorios
+    path('acessorios/', acessorios_listar, name= 'listar_acessorios'),
+    path('acessorios_cadastro/', acessorios_cadastrar, name='acessorios_cadastro'),
+    path('acessorios_editar/<int:id>/', acessorios_editar, name='acessorios_editar'),
+    path('acessorios_remover/<int:id>/', acessorios_remover, name= 'acessorios_remover'),
 ]
