@@ -4,20 +4,20 @@ from .models import Camisas, Short, Calcados, Acessorios
 
 class CamisasForm(ModelForm):
     class Meta:
-           model = Camisas
-           fields = ['tamanho', 'marca', 'tipo', 'nome', 'ano', 'personalizacao', 'foto']
+        model = Camisas
+        fields = ['tamanho', 'marca', 'tipo', 'nome', 'ano', 'personalizacao', 'foto', 'quantidade']
 
 class ShortForm(ModelForm):
     class Meta:
-           model = Short
-           fields = ['modelo', 'tamanho','marca','tipo','foto']
+        model = Short
+        fields = ['modelo', 'tamanho','marca','tipo','foto' ,'quantidade']
 
 class CalcadosForm(ModelForm):
     class Meta:
-           model = Calcados
-           fields = ['modelo', 'tamanho','marca','marca','foto']
+        model = Calcados
+        fields = ['modelo', 'tamanho','marca','tipo','foto', 'quantidade']
 
 class AcessoriosForm(ModelForm):
     class Meta:
         model = Acessorios
-        fiels = ['nome','tipo','marca','esporte','foto','quantidade']
+        fields = ['nome','tipo','marca','esporte','foto','quantidade']

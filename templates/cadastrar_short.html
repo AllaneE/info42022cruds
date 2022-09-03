@@ -1,0 +1,83 @@
+{% extends "Bases\base.html" %}
+{% load widget_tweaks %}
+{% load static %}
+{% block tituloPagina %}Cadastro de shorts {% endblock %}
+
+{% block header%}
+<header>
+  <div class="page-header header-filter clear-filter opcacidade" data-parallax="true" style="    padding-bottom: 20%;
+  padding-top: 10%; background-image: url('/static/2.png'); background-size: cover; filter: brightness(80%) ">
+    <div class="container p-4">
+        <div class="row ">
+            <div class="col m-4 cor ">
+                <div class="brand text-center p-4">
+                    <h1>Cadastre um novo short </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+{% endblock%}
+
+{% block conteudo %}
+<div class="row m-5 p-4">
+  <div class="col-12 text-center">
+    <p>“Tenho feito tudo o que posso, e Deus vai me levar o resto do caminho. Então estou muito confortável com isso”</br>-Kobe Bryant</p>
+    </a>
+  </div>
+</div>
+
+<div class="row m-5" >
+
+  <form class="row g-3 was-validated" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="col-md-6">
+      {{form.modelo.label}}:
+      {% render_field form.modelo placeholder="Modelo específico" class="form-control"%}
+          <div class="invalid-feedback">
+            Por favor, insira uma mensagem válida.
+          </div>
+    </div>
+    <div class="col-md-6">
+      {{form.marca.label}}:
+      {% render_field form.marca placeholder="Marca do produto" class="form-control"%}
+          <div class="invalid-feedback">
+            Por favor, insira uma mensagem válida.
+          </div>
+    </div>
+    <div class="col-4">
+      {{form.tamanho.label}}:
+      {% render_field form.tamanho placeholder="Tamanhos de P A XG" class="form-control"%}
+          <div class="invalid-feedback">
+            Por favor, insira uma mensagem válida.
+          </div>
+    </div>
+    <div class="col-4">
+      {{form.tipo.label}}:
+      {% render_field form.tipo placeholder="Tipo do produto" class="form-control"%}
+          <div class="invalid-feedback">
+            Por favor, insira uma mensagem válida.
+          </div>
+    </div>
+    
+    <div class="col-md-4">
+      {{form.quantidade.label}}:
+      {% render_field form.quantidade aria-label="file example" class="form-control"%}
+          <div class="invalid-feedback">
+            Por favor, insira um número válido.
+          </div>
+    </div>
+    <div class="col-12">
+      {{form.foto.label}}:
+      {% render_field form.foto  class="form-control"%}
+      <div class="invalid-feedback">Exemplo de feedback de arquivo de formulário inválido</div>
+      
+    </div>
+    <div class=" col-12 mb-3 text-center">
+      <input class="btn btn-secondary" type="submit" value="Cadastrar"/>
+    </div>
+  </form>
+ 
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "Bases\base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block tituloPagina %}Acessorios{% endblock %}
+
+{% block header%}
+<header>
+  <div class="page-header header-filter clear-filter opcacidade" data-parallax="true" style="    padding-bottom: 20%;
+  padding-top: 10%; background-image: url('/static/3.png'); background-size: cover; filter: brightness(80%) ">
+    <div class="container p-4">
+        <div class="row ">
+            <div class="col m-4 cor ">
+                <div class="brand text-center p-4">
+                    <h1>Listagem de Acessórios </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+{% endblock%}
+
+{% block conteudo %}
+<div class="row m-5 p-4">
+  
+  <div class="col-lg-12 text-center">
+    <p>"Eu acho que às vezes na vida os maiores desafios acabam sendo as melhores coisas que acontecem em sua vida."</br>-Tom Brady</p>
+    <a href="{% url 'acessorio_cadastro' %}"><button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><span class="text-500 fas fa-trash-alt"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg></span></button>
+    </a>
+  </div>
+</div>
+
+<div class="row m-4">
+
+    <div class="table-responsive scrollbar">
+      
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col-3">Nome</th>
+              <th scope="col-2">Tipo</th>
+              <th scope="col-2">Marca</th>
+              <th scope="col-2">Esporte</th>
+              <th scope="col-2">Quantidade</th>
+              <th scope="col-3">Foto</th>
+              <th  scope="col-3">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for acessorio in listar_acessorios%}
+            <tr>
+              <td>{{acessorio.nome}}</td>
+              <td>{{acessorio.tipo}}</td>
+              <td>{{acessorio.marca}}</td>
+              <td>{{acessorio.esporte}}</td>
+              <td>{{acessorio.quantidade}}</td>
+              <td><img src="/media/{{acessorio.foto}}" alt="" width="60px" height="60px"/></td>
+              <td >
+                <div>
+                    <a href="{% url 'acessorio_editar' acessorio.id%}"><button class="btn btn-link p-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><span class="text-500 fas fa-edit"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg></span></button></a>
+                    <a href="{% url 'acessorio_remover' acessorio.id%}"><button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><span class="text-500 fas fa-trash-alt"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
+                        <path d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"/>
+                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                      </svg></span></button></a>
+                </div>
+              </td>
+            </tr>
+            {% empty %}
+            <p>Nenhum curso cadastrado</p>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      
+</div>
+{% endblock %}

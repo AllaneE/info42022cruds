@@ -19,6 +19,8 @@ from core.views import short_listar,camisas_listar,calcados_listar,acessorios_li
 from core.views import acessorios_cadastrar,camisas_cadastrar,calcados_cadastrar, short_cadastrar
 from core.views import short_editar, camisas_editar,calcados_editar,acessorios_editar
 from core.views import short_remover,camisas_remover,calcados_remover,acessorios_remover, home
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,9 +36,9 @@ urlpatterns = [
 
     #url de calcados
     path('calcados/', calcados_listar, name= 'listar_calcados'),
-    path('calcados_cadastro/', calcados_cadastrar, name='calcados_cadastro'),
-    path('calcados_editar/<int:id>/', calcados_editar, name='calcados_editar'),
-    path('calcados_remover/<int:id>/', calcados_remover, name= 'calcados_remover'),
+    path('calcados_cadastro/', calcados_cadastrar, name='calcado_cadastro'),
+    path('calcados_editar/<int:id>/', calcados_editar, name='calcado_editar'),
+    path('calcados_remover/<int:id>/', calcados_remover, name= 'calcado_remover'),
 
 
     #url de shorts
@@ -48,7 +50,7 @@ urlpatterns = [
 
     #url de acessorios
     path('acessorios/', acessorios_listar, name= 'listar_acessorios'),
-    path('acessorios_cadastro/', acessorios_cadastrar, name='acessorios_cadastro'),
-    path('acessorios_editar/<int:id>/', acessorios_editar, name='acessorios_editar'),
-    path('acessorios_remover/<int:id>/', acessorios_remover, name= 'acessorios_remover'),
-]
+    path('acessorios_cadastro/', acessorios_cadastrar, name='acessorio_cadastro'),
+    path('acessorios_editar/<int:id>/', acessorios_editar, name='acessorio_editar'),
+    path('acessorios_remover/<int:id>/', acessorios_remover, name= 'acessorio_remover'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

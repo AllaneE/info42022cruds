@@ -9,7 +9,7 @@ class Camisas(models.Model):
     nome = models.CharField("Nome", max_length=100)
     ano = models.CharField("Ano de lançamento", max_length=4)
     personalizacao = models.IntegerField("Númeração da Camisa")
-    foto = models.FileField("Foto do Produto")
+    foto = models.ImageField('Foto', upload_to='camisas', null=True)
     quantidade = models.IntegerField("Quantidade")
 
 class Short(models.Model):
@@ -17,7 +17,7 @@ class Short(models.Model):
     tamanho = models.CharField("Tamanho", max_length=2)
     marca = models.CharField("Marca", max_length=100)
     tipo = models.CharField("Tipo", max_length=100)
-    foto = models.FileField("Foto do Produto")
+    foto = models.ImageField('Foto', upload_to='shorts', null=True)
     quantidade = models.IntegerField("Quantidade")
 
 class Calcados(models.Model):
@@ -25,7 +25,7 @@ class Calcados(models.Model):
     tamanho = models.CharField("Tamanho", max_length=2)
     marca = models.CharField("Marca", max_length=100)
     tipo = models.CharField("Tipo", max_length=100)
-    foto = models.FileField("Foto do Produto")
+    foto = models.ImageField('Foto', upload_to='calcados', null=True)
     quantidade = models.IntegerField("Quantidade")
 
 class Acessorios(models.Model):
@@ -33,6 +33,6 @@ class Acessorios(models.Model):
     tipo = models.CharField("Tipo", max_length=100)
     marca = models.CharField("Marca do produto", max_length=100)
     esporte = models.CharField("Tamanho", max_length=100)
-    foto = models.FileField("Foto do Produto")
+    foto = models.ImageField('Foto', upload_to='acessorios', null=True)
     quantidade = models.IntegerField("Quantidade")
 

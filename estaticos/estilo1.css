@@ -1,0 +1,52 @@
+a:link {
+    text-decoration: none;
+    color: #EBEBEB;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: #EBEBEB;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #EBEBEB;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    color: #EBEBEB;
+  }
+
+.link2{
+    color: #161515;
+    text-decoration: none;
+}
+.link2:hover{
+  color: #EBEBEB;
+  text-decoration: none;
+}
+.link2:visited{
+  color: #EBEBEB;
+  text-decoration: none;
+}
+.link2:active{
+  color: #EBEBEB;
+  text-decoration: none;
+}
+
+.opcacidade{
+    opacity: 0.95;
+}
+/*Fundos*/
+body{
+    background-color: #EBEBEB;
+
+}
+
+.cardCor{
+    background-color: #F5F5F5;
+    box-shadow: 7px 7px 13px 0px rgba(70, 70, 70, 0.30);
+    transition: all 0.3s ease-out;
+    border:none;
+}
