@@ -1,0 +1,100 @@
+button{
+  color:black;
+}
+.opcacidade{
+    opacity: 0.95;
+    
+}
+/*Fundos*/
+body{
+    background-color: #EBEBEB;
+
+}
+
+.cardCor{
+    background-color: #F5F5F5;
+    box-shadow: 7px 7px 13px 0px rgba(70, 70, 70, 0.30);
+    transition: all 0.3s ease-out;
+    border:none;
+}
+
+a{
+  text-decoration: none;
+  font-size: 17px;
+}
+
+p{
+  font-size: 25px;
+  color: #0c161b;
+  font-family:Calibri Light
+}
+
+h1{
+  font-size: 100px;
+  color: #ffffff;
+  font-family: Elephant ;
+  text-shadow: 2px 1px 6px #252525;
+}
+
+h2{
+  font-size: 60px;
+  color: #1B3440;
+  font-family: Elephant ;
+  text-shadow: 2px 1px 4px #678D8E;
+}
+
+h3{
+  font-size: 35px;
+  color: #ffffff;
+  font-family: Rockwell Condensed ;
+  letter-spacing: 0.10cm;
+  text-shadow: 2px 1px 6px #252525;
+  
+}
+
+h5{
+  font-size: 85px;
+  color: #1B3440;
+  font-family: Rockwell Condensed ;
+}
+
+.off{
+  font-size: 30px;
+  color:#F5F5F5 ;
+}
+
+a{
+  color:#678D8E ;
+  text-decoration: none;
+  font-family: Calibri Light;
+  font-size: 20px;
+}
+a:hover{
+  color: #7DA0A1;
+  text-decoration: none;
+}
+
+.bt{ 
+  transition: 0.8s;
+  color:#678D8E ;
+  background-color: #EBEBEB;
+}
+
+.bt:hover { 
+  color:#678D8E ;
+  background-color: #EBEBEB;
+}
+
+.btn-link{
+  transition: 0.8s;
+  color:#678D8E;
+  background-color: #EBEBEB;
+}
+
+.btn-link:hover{
+  transition: 0.8s;
+  color:#678D8E;
+  background-color: #EBEBEB;
+}
+
+

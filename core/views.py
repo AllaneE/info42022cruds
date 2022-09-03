@@ -17,7 +17,7 @@ def camisas_listar(request):
     return render(request,'camisas.html' , contexto)
 
 def camisas_cadastrar(request):
-    form = CamisasForm(request.POST or None)
+    form = CamisasForm(request.POST or None, request.FILES or None)
     if form.is_valid():
             form.save()
             return redirect('listar_camisas')
@@ -29,7 +29,7 @@ def camisas_cadastrar(request):
 def camisas_editar(request,id):
     camisa = Camisas.objects.get(pk=id)
     
-    form = CamisasForm(request.POST or None, instance=camisa)
+    form = CamisasForm(request.POST or None, request.FILES or None, instance=camisa)
     if form.is_valid():
         form.save()
         return redirect('listar_camisas')
@@ -38,7 +38,6 @@ def camisas_editar(request,id):
         'form': form
     }
     return render(request, 'cadastrar_camisas.html', contexto)
-
 
 def camisas_remover(request,id):
     camisas = Camisas.objects.get(pk=id)
@@ -54,7 +53,7 @@ def short_listar(request):
     return render(request,'short.html' , contexto)
 
 def short_cadastrar(request):
-    form = ShortForm(request.POST or None)
+    form = ShortForm(request.POST or None,request.FILES or None)
     if form.is_valid():
             form.save()
             return redirect('listar_shorts')
@@ -66,7 +65,7 @@ def short_cadastrar(request):
 def short_editar(request,id):
     short = Short.objects.get(pk=id)
     
-    form = ShortForm(request.POST or None, instance=short)
+    form = ShortForm(request.POST or None,request.FILES or None,  instance=short)
     if form.is_valid():
         form.save()
         return redirect('listar_shorts')
@@ -90,7 +89,7 @@ def calcados_listar(request):
     return render(request,'calcados.html' , contexto)
 
 def calcados_cadastrar(request):
-    form = CalcadosForm(request.POST or None)
+    form = CalcadosForm(request.POST or None,request.FILES or None)
     if form.is_valid():
             form.save()
             return redirect('listar_calcados')
@@ -102,7 +101,7 @@ def calcados_cadastrar(request):
 def calcados_editar(request,id):
     calcados = Calcados.objects.get(pk=id)
     
-    form = CalcadosForm(request.POST or None, instance=calcados)
+    form = CalcadosForm(request.POST or None,request.FILES or None, instance=calcados)
     if form.is_valid():
         form.save()
         return redirect('listar_calcados')
@@ -126,7 +125,7 @@ def acessorios_listar(request):
     return render(request,'acessorios.html' , contexto)
 
 def acessorios_cadastrar(request):
-    form = AcessoriosForm(request.POST or None)
+    form = AcessoriosForm(request.POST or None,request.FILES or None)
     if form.is_valid():
             form.save()
             return redirect('listar_acessorios')
@@ -138,7 +137,7 @@ def acessorios_cadastrar(request):
 def acessorios_editar(request,id):
     acessorio = Acessorios.objects.get(pk=id)
     
-    form = AcessoriosForm(request.POST or None, instance=acessorio)
+    form = AcessoriosForm(request.POST or None,request.FILES or None, instance=acessorio)
     if form.is_valid():
         form.save()
         return redirect('listar_acessorios')

@@ -10,123 +10,69 @@
             padding-top: 10%;
             padding-bottom: 20%;
         }
+        body{
+    background-color: #F5F5F5;
+}
+.cardCor{
+    background-color:#FAFAFA;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    transition: all 0.3s ease-out;
+    border:none;
+    }
+    a:link{
+color: #F5F5F5;
+}
+
+a:hover{
+color: aqua;
+}
+
+a:visited{
+color: aqua;
+}
+
+a:active{
+color: #000;
+}
+.active{
+  color:#ffff
+}
+
+
     </style>
 </head>
   <body>
 
-    <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
-        <div class="container">
-        <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/marketplace/material-kit-pro/index.html">
-        Material Kit PRO </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        </div>
-        <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-        <li class="dropdown nav-item">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-        <i class="material-icons">apps</i> Components
-        </a>
-        <div class="dropdown-menu dropdown-with-icons">
-        <a href="./presentation.html" class="dropdown-item">
-        <i class="material-icons">line_style</i> Presentation
-        </a>
-        <a href="./index.html" class="dropdown-item">
-        <i class="material-icons">layers</i> All Components
-        </a>
-        <a href="https://demos.creative-tim.com/marketplace/material-kit-pro/docs/2.1/getting-started/introduction.html" class="dropdown-item">
-        <i class="material-icons">content_paste</i> Documentation
-        </a>
-        </div>
-        </li>
-        <li class="dropdown nav-item">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-        <i class="material-icons">view_day</i> Sections
-        </a>
-        <div class="dropdown-menu dropdown-with-icons">
-        <a href="./sections.html#headers" class="dropdown-item">
-        <i class="material-icons">dns</i> Headers
-        </a>
-        <a href="./sections.html#features" class="dropdown-item">
-        <i class="material-icons">build</i> Features
-        </a>
-        <a href="./sections.html#blogs" class="dropdown-item">
-        <i class="material-icons">list</i> Blogs
-        </a>
-        <a href="./sections.html#teams" class="dropdown-item">
-        <i class="material-icons">people</i> Teams
-        </a>
-        <a href="./sections.html#projects" class="dropdown-item">
-        <i class="material-icons">assignment</i> Projects
-        </a>
-        <a href="./sections.html#pricing" class="dropdown-item">
-        <i class="material-icons">monetization_on</i> Pricing
-        </a>
-        <a href="./sections.html#testimonials" class="dropdown-item">
-        <i class="material-icons">chat</i> Testimonials
-        </a>
-        <a href="./sections.html#contactus" class="dropdown-item">
-        <i class="material-icons">call</i> Contacts
-        </a>
-        </div>
-        </li>
-        <li class="dropdown nav-item">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-        <i class="material-icons">view_carousel</i> Examples
-        </a>
-        <div class="dropdown-menu dropdown-with-icons">
-        <a href="./examples/about-us.html" class="dropdown-item">
-        <i class="material-icons">account_balance</i> About Us
-        </a>
-        <a href="./examples/blog-post.html" class="dropdown-item">
-        <i class="material-icons">art_track</i> Blog Post
-        </a>
-        <a href="./examples/blog-posts.html" class="dropdown-item">
-        <i class="material-icons">view_quilt</i> Blog Posts
-        </a>
-        <a href="./examples/contact-us.html" class="dropdown-item">
-        <i class="material-icons">location_on</i> Contact Us
-        </a>
-        <a href="./examples/landing-page.html" class="dropdown-item">
-        <i class="material-icons">view_day</i> Landing Page
-        </a>
-        <a href="./examples/login-page.html" class="dropdown-item">
-        <i class="material-icons">fingerprint</i> Login Page
-        </a>
-         <a href="./examples/pricing.html" class="dropdown-item">
-        <i class="material-icons">attach_money</i> Pricing Page
-        </a>
-        <a href="./examples/shopping-cart.html" class="dropdown-item">
-        <i class="material-icons">shopping_basket</i> Shopping Cart
-        </a>
-        <a href="./examples/ecommerce.html" class="dropdown-item">
-        <i class="material-icons">store</i> Ecommerce Page
-        </a>
-        <a href="./examples/product-page.html" class="dropdown-item">
-        <i class="material-icons">shopping_cart</i> Product Page
-        </a>
-        <a href="./examples/profile-page.html" class="dropdown-item">
-        <i class="material-icons">account_circle</i> Profile Page
-        </a>
-        <a href="./examples/signup-page.html" class="dropdown-item">
-        <i class="material-icons">person_add</i> Signup Page
-        </a>
-        </div>
-        </li>
-        <li class="button-container nav-item iframe-extern">
-        <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
-        <i class="material-icons">shopping_cart</i> Buy Now
-        </a>
-        </li>
+  <nav class="navbar  fixed-top navbar-color-on-scroll navbar-transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">dvmdkfm</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'listar_camisas'%}">Camisas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'listar_shorts'%}">Shorts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'listar_calcados'%}">Calçados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'listar_acessorios'%}">Acessórios</a>
+          </li>
         </ul>
-        </div>
-        </div>
-        </nav>
+      </div>
+    </div>
+  </div>
+</nav>
 
         <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/11/18/52/landscape-2494650_960_720.jpg');">
             <div class="container p-4">
@@ -142,7 +88,7 @@
         </div>
         
         
-         <!-- categories -->
+    <!-- categories -->
     <section class="bg-purple">
         <div class="container">
           <div class="row m-5 p-4">
@@ -155,7 +101,29 @@
           </div>
 
           <div class="row g-0 bg-light position-relative m-3">
-            <div class="col-md-6 p-4 ps-md-0">
+            <div class="col-md-6 p-5">
+              <h5 class="mt-0">Columns with stretched link</h5>
+              <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+              <a href="#" class="stretched-link">Go somewhere</a>
+            </div>
+            <div class="col-md-6 mb-md-0 p-md-4">
+                <img src="..." class="w-100" alt="...">
+              </div>
+          </div>
+
+          <div class="row g-0 bg-light position-relative m-3 ">
+            <div class="col-md-6 mb-md-0 p-md-4 cardCor">
+              <img src="..." class="w-100" alt="...">
+            </div>
+            <div class="col-md-6 p-5 cardCor">
+              <h5 class="mt-0">Columns with stretched link</h5>
+              <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+              <a href="#" class="stretched-link">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="row g-0 bg-light position-relative m-3">
+            <div class="col-md-6 p-5 ">
               <h5 class="mt-0">Columns with stretched link</h5>
               <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
               <a href="#" class="stretched-link">Go somewhere</a>
@@ -169,22 +137,11 @@
             <div class="col-md-6 mb-md-0 p-md-4">
               <img src="..." class="w-100" alt="...">
             </div>
-            <div class="col-md-6 p-4 ps-md-0">
+            <div class="col-md-6 p-5 ">
               <h5 class="mt-0">Columns with stretched link</h5>
               <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
               <a href="#" class="stretched-link">Go somewhere</a>
             </div>
-          </div>
-
-          <div class="row g-0 bg-light position-relative m-3">
-            <div class="col-md-6 p-4 ps-md-0">
-              <h5 class="mt-0">Columns with stretched link</h5>
-              <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-              <a href="#" class="stretched-link">Go somewhere</a>
-            </div>
-            <div class="col-md-6 mb-md-0 p-md-4">
-                <img src="..." class="w-100" alt="...">
-              </div>
           </div>
           
         </div>

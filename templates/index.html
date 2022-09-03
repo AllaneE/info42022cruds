@@ -1,0 +1,94 @@
+{% extends "Bases\base.html" %}
+{% load static %}
+{%block tituloPagina%}Inicio{% endblock %}
+
+{% block header%}
+<div class="page-header header-filter clear-filter opcacidade" data-parallax="true" style="    padding-bottom: 20%;
+padding-top: 10%; background-image: url('/static/shutterstock_738806251-1.jpg'); background-size: cover; ">
+    <div class="container p-4">
+        <div class="row ">
+            <div class="col m-4 cor text-center ">
+                <div class="brand p-4">
+                    <h1>Estação do Atleta</h1>
+                    <h3 class="title">“Algumas pessoas gostariam que algo acontecesse. Algumas desejam que aconteça. E outras fazem acontecer.” </br>-Michael Jordan</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
+
+
+{% block conteudo %}
+      <!-- categories -->
+<section>
+    <div class="container">
+      <div class="row m-5 p-4">
+        <div class="col-lg-5">
+          <h2>Cadastros Disponíveis</h2>
+        </div>
+        <div class="col-lg-7">
+          <p>A melhor loja de esportes trás para você um cadastro de catálogo lindo e fácil. </p>
+        </div>
+      </div>
+
+      
+
+      <!-- cards -->
+      <div class="row g-0 position-relative m-4 cardCor">
+        <div class="col-md-6 p-5 text-end ">
+          <h5 class="mt-0">Camisas</h5>
+          <p>Cadastre novas camisas através de informações bases.</p>
+          <a href="{% url 'listar_camisas'%}" class="stretched-link "><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg></a>
+        </div>
+        <div class="col-md-6 ">
+            <img src="{% static 'IG-585x731.jpg' %}" class="w-100" alt="...">
+          </div>
+      </div>
+
+      <div class="row g-0 position-relative m-4 cardCor">
+        <div class="col-md-6 ">
+          <img src="{% static 'stephen-curry-veste-novo-uniforme-do-golden-state-warriors-1604415267654_v2_450x600.jpg' %}" class="w-100" alt="...">
+        </div>
+        <div class="col-md-6 p-5 ">
+          <h5 class="mt-0">Shorts</h5>
+          <p>Cadastre novos shorts através de informações bases.</p>
+          <a href="{% url 'listar_shorts'%}" class="stretched-link"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="row g-0 position-relative m-4 cardCor">
+        <div class="col-md-6 p-5 text-end ">
+          <h5 class="mt-0">Calçados</h5>
+          <p>Cadastre novos calçados através de informações bases.</p>
+          <a href="{% url 'listar_calcados'%}" class="stretched-link"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg></a>
+        </div>
+        <div class="col-md-6 ">
+            <img src="{% static 'T nis De Basquete Puma Masculino - D 653_6_ZOOM.jpg' %}" class="w-100" alt="...">
+          </div>
+      </div>
+
+      <div class="row g-0 position-relative m-4 cardCor">
+        <div class="col-md-6 ">
+            <img src="{% static 'baseball_ou_beisebol.webp' %}" class="w-100" alt="...">
+        </div>
+        <div class="col-md-6 p-4 ">
+            <h5 class="mt-0">Acessórios</h5>
+            <p>Cadastre novos acessórios através de informações bases.</p>
+            <a href="{% url 'listar_acessorios'%}" class="stretched-link"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg></a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+{% endblock %}
+
+
